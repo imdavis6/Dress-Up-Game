@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhfdvddaftkm"]
+
+[ext_resource type="Texture2D" uid="uid://deodulkyqnon0" path="res://Doll/Doll.png" id="1_42gw1"]
+[ext_resource type="Script" path="res://Doll/Doll.gd" id="1_lsphr"]
+
+[node name="Doll" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_lsphr")
+
+[node name="Doll" type="Sprite2D" parent="."]
+position = Vector2(6, -209)
+scale = Vector2(0.272685, 0.269208)
+texture = ExtResource("1_42gw1")
+
+[node name="TopSnap" type="Node2D" parent="."]
+position = Vector2(-1, -254)
+
+[node name="BottomSnap" type="Node2D" parent="."]
+position = Vector2(-1, -153)
+
+[node name="FeetSnap" type="Node2D" parent="."]
+position = Vector2(3, -11)

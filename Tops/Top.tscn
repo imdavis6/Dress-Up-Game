@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc3a36vxfgr70"]
+
+[ext_resource type="Texture2D" uid="uid://deodulkyqnon0" path="res://Doll/Doll.png" id="2_wnats"]
+[ext_resource type="Texture2D" uid="uid://4lut6i0j5udw" path="res://Tops/Pink Shirt.png" id="3_fh7k8"]
+
+[node name="Top" type="Node2D"]
+
+[node name="Doll" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.329412)
+position = Vector2(7, 45)
+scale = Vector2(0.272685, 0.269208)
+texture = ExtResource("2_wnats")
+
+[node name="PinkShirt" type="Sprite2D" parent="."]
+position = Vector2(6.99999, 50)
+scale = Vector2(0.271048, 0.277828)
+texture = ExtResource("3_fh7k8")
+
+[node name="PinkShirt2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.0745098, 0.839216, 0.305882, 1)
+position = Vector2(8, 49)
+scale = Vector2(0.271048, 0.277828)
+texture = ExtResource("3_fh7k8")
