@@ -1,5 +1,7 @@
 extends Area2D
-@export var snap_distance: float = 100.0 # px
+
+
+const SNAP_DISTANCE = 100 # px
 var is_dragging: bool = false
 func _ready():
 	input_event.connect(OnInputEvent)
@@ -17,6 +19,6 @@ func _process(delta):
 	if is_dragging: 
 		position = get_viewport().get_mouse_position() - get_parent().position
 		var pos = get_parent().top_snap.position
-		if position.distance_to(pos) < snap_distance:
+		if position.distance_to(pos) < SNAP_DISTANCE:
 			print("YIPPIE")
-			get_parent().AttachTop(self)
+			get_parent().AttachBottom(self)

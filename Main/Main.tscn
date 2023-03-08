@@ -1,10 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://e0ch0udtp5db"]
+[gd_scene load_steps=5 format=3 uid="uid://e0ch0udtp5db"]
 
 [ext_resource type="PackedScene" uid="uid://bxhfdvddaftkm" path="res://Doll/Doll.tscn" id="1_d4mf8"]
 [ext_resource type="Script" path="res://Main/Main.gd" id="1_uaelu"]
+[ext_resource type="PackedScene" uid="uid://dc3a36vxfgr70" path="res://Tops/Top.tscn" id="2_nx2ck"]
+[ext_resource type="PackedScene" uid="uid://c6ac5qrxrhojw" path="res://Bottoms/Bottom.tscn" id="4_ghnwo"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_uaelu")
 
 [node name="Doll" parent="." instance=ExtResource("1_d4mf8")]
 position = Vector2(584, 523)
+
+[node name="Bottom" parent="Doll" instance=ExtResource("4_ghnwo")]
+position = Vector2(253, -149)
+
+[node name="Bottom2" parent="Doll" instance=ExtResource("4_ghnwo")]
+visible = false
+modulate = Color(0.301961, 0.317647, 0.847059, 1)
+position = Vector2(292, -117)
+
+[node name="Bottom3" parent="Doll" instance=ExtResource("4_ghnwo")]
+visible = false
+modulate = Color(0.890196, 0.411765, 0.329412, 1)
+position = Vector2(363, -77)
+
+[node name="Top" parent="Doll" instance=ExtResource("2_nx2ck")]
+position = Vector2(258, -340)
+
+[node name="Top2" parent="Doll" instance=ExtResource("2_nx2ck")]
+visible = false
+modulate = Color(0.878431, 0.529412, 0.807843, 1)
+position = Vector2(314, -322)
+
+[node name="Top3" parent="Doll" instance=ExtResource("2_nx2ck")]
+visible = false
+modulate = Color(0.243137, 0.545098, 1, 1)
+position = Vector2(387, -284)
