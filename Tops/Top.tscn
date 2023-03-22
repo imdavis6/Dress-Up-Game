@@ -1,24 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://dc3a36vxfgr70"]
 
-[ext_resource type="Script" path="res://Tops/Top.gd" id="1_30pq8"]
+[ext_resource type="Script" path="res://Tops/Vestment.gd" id="1_bux0g"]
 [ext_resource type="Texture2D" uid="uid://deodulkyqnon0" path="res://Doll/Doll.png" id="2_wnats"]
 [ext_resource type="Texture2D" uid="uid://4lut6i0j5udw" path="res://Tops/Pink Shirt.png" id="3_fh7k8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0l82"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21ea3"]
 size = Vector2(136, 87)
 
 [node name="Top" type="Area2D"]
-script = ExtResource("1_30pq8")
+script = ExtResource("1_bux0g")
 
 [node name="Doll" type="Sprite2D" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.329412)
-position = Vector2(7, 45)
+position = Vector2(6, -209)
 scale = Vector2(0.272685, 0.269208)
 texture = ExtResource("2_wnats")
 
 [node name="PinkShirt" type="Sprite2D" parent="."]
-position = Vector2(6.99999, 50)
+position = Vector2(6.00002, -206)
 scale = Vector2(0.271048, 0.277828)
 texture = ExtResource("3_fh7k8")
 
@@ -30,5 +29,5 @@ scale = Vector2(0.271048, 0.277828)
 texture = ExtResource("3_fh7k8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 6.5)
-shape = SubResource("RectangleShape2D_k0l82")
+position = Vector2(-2, -248)
+shape = SubResource("RectangleShape2D_21ea3")

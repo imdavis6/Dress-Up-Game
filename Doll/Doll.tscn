@@ -12,11 +12,4 @@ position = Vector2(6, -209)
 scale = Vector2(0.272685, 0.269208)
 texture = ExtResource("1_42gw1")
 
-[node name="TopSnap" type="Node2D" parent="."]
-position = Vector2(-1, -254)
-
-[node name="BottomSnap" type="Node2D" parent="."]
-position = Vector2(1, -138)
-
-[node name="FeetSnap" type="Node2D" parent="."]
-position = Vector2(3, -11)
+[node name="Snap" type="Node2D" parent="."]
