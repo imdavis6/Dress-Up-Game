@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc3a36vxfgr70"]
+[gd_scene load_steps=6 format=3 uid="uid://dc3a36vxfgr70"]
 
 [ext_resource type="Script" path="res://Tops/Vestment.gd" id="1_bux0g"]
 [ext_resource type="Texture2D" uid="uid://deodulkyqnon0" path="res://Doll/Doll.png" id="2_wnats"]
 [ext_resource type="Texture2D" uid="uid://4lut6i0j5udw" path="res://Tops/Pink Shirt.png" id="3_fh7k8"]
+[ext_resource type="Texture2D" uid="uid://cq26rbngqlpdc" path="res://Tops/long sleeve.png" id="3_mq2wn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_21ea3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dl5b"]
 size = Vector2(136, 87)
 
 [node name="Top" type="Area2D"]
@@ -16,18 +17,21 @@ position = Vector2(6, -209)
 scale = Vector2(0.272685, 0.269208)
 texture = ExtResource("2_wnats")
 
+[node name="LongSleeve" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(5, -207)
+scale = Vector2(0.285021, 0.285995)
+texture = ExtResource("3_mq2wn")
+
 [node name="PinkShirt" type="Sprite2D" parent="."]
 position = Vector2(6.00002, -206)
 scale = Vector2(0.271048, 0.277828)
 texture = ExtResource("3_fh7k8")
 
-[node name="PinkShirt2" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(0.0745098, 0.839216, 0.305882, 1)
-position = Vector2(8, 49)
-scale = Vector2(0.271048, 0.277828)
-texture = ExtResource("3_fh7k8")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -209)
+scale = Vector2(0.279467, 0.263309)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -248)
-shape = SubResource("RectangleShape2D_21ea3")
+shape = SubResource("RectangleShape2D_6dl5b")

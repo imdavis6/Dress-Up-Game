@@ -1,9 +1,25 @@
 extends Node
 @onready var doll = $Doll
-const TOP = preload("res://Tops/Top.tscn")
+@onready var save_button = $SaveButton
+@onready var load_button = $LoadButton
 
-func _process(delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		var top = TOP.instantiate()
-		#doll.add_child(top)
-		#doll.AttachTop(top)
+
+const TOP = preload("res://Tops/Top.tscn")
+const USER_PATH = "user://game_save.sav"
+
+
+func _ready():
+	save_button.pressed.connect(OnSaved)
+	load_button.pressed.connect(OnLoad)
+	
+func OnSaved():
+	print("fart")
+	var file = FileAccess.open(USER_PATH, FileAccess.WRITE)
+	file.store_string(doll.vestments[0].name)
+
+func OnLoad():
+	var file = FileAccess.open(USER_PATH, FileAccess.READ)
+	var number = file.get_32()
+	print(number)
+#TODO: Load, Display, Attach vestments 
+

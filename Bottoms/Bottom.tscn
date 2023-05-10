@@ -17,7 +17,7 @@ position = Vector2(6, -209)
 scale = Vector2(0.272685, 0.269208)
 texture = ExtResource("2_smdwq")
 
-[node name="CargoPants" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
 position = Vector2(7, -205)
 scale = Vector2(0.266517, 0.266013)
 texture = ExtResource("3_av0v8")
