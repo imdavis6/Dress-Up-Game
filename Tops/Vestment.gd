@@ -1,7 +1,7 @@
 extends Area2D
 class_name Vestment
 
-@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var sprite_2d = $Sprite2D
 @export var snap_distance: float = 20.0 # px
 var is_dragging: bool = false
 var mouse_offset: Vector2
@@ -13,7 +13,7 @@ func _process(delta):
 	if Input.is_action_just_released("drag"):
 		is_dragging = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		animated_sprite_2d.frame
+		sprite_2d.frame
 		
 	
 	if is_dragging: 
@@ -28,6 +28,7 @@ func OnInputEvent(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		#Pressed down
 		if event.pressed:
+			print(shape_idx)
 			is_dragging = true
 			mouse_offset = get_local_mouse_position()
 

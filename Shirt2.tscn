@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://lpykkjwn560l"]
+
+[ext_resource type="Script" path="res://Tops/Vestment.gd" id="1_77h7y"]
+[ext_resource type="Texture2D" uid="uid://cq26rbngqlpdc" path="res://Tops/long sleeve.png" id="2_my8nm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ngr4"]
+size = Vector2(782.399, 462.832)
+
+[node name="Shirt2" type="Area2D"]
+script = ExtResource("1_77h7y")
+
+[node name="LongSleeve" type="Sprite2D" parent="."]
+position = Vector2(5, -207)
+scale = Vector2(0.285021, 0.285995)
+texture = ExtResource("2_my8nm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.499992, -224.184)
+scale = Vector2(0.285021, 0.285995)
+shape = SubResource("RectangleShape2D_2ngr4")

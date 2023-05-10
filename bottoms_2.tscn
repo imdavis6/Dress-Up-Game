@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv3grmukmqqyw"]
+
+[ext_resource type="Script" path="res://Tops/Vestment.gd" id="1_tgmu3"]
+[ext_resource type="Texture2D" uid="uid://c2fintuwuytnu" path="res://Bottoms/sweat pants.png" id="2_nxyvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_120mj"]
+size = Vector2(1803.51, 2221.39)
+
+[node name="Bottoms2" type="Area2D"]
+script = ExtResource("1_tgmu3")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -205)
+scale = Vector2(0.266517, 0.266013)
+texture = ExtResource("2_nxyvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.5, -101.5)
+scale = Vector2(0.0759629, 0.0760784)
+shape = SubResource("RectangleShape2D_120mj")
